@@ -1,0 +1,12 @@
+.header{
+    width: 100px;
+}
+footer{
+    width: 100px;
+}
+ul li ol {
+    list-style: none;
+}
+a{
+    list-style: none;
+}

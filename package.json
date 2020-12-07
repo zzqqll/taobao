@@ -1,0 +1,23 @@
+{
+  "name": "taobao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzqqll/taobao.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzqqll/taobao/issues"
+  },
+  "homepage": "https://github.com/zzqqll/taobao#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  }
+}
