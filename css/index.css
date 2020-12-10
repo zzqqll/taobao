@@ -1,54 +1,68 @@
-.img > img{
-    /* width: 100%; */
-        /* height: 100px; */
-        margin-left: 150px;
-}
+/* .img>img{
+    width: 100%;
+    /* height: 100px; */
+    /* margin-left: 150px; */
+/* } */ */
+
 .img{
     /* margin-left: 100px; */
     width: 100%;
-    background-color:red;
+    background-color: red;
 }
-.header > ul{
+
+.header>ul{
     /* margin-left: 200px; */
     font-size: 14px;
     height: line-height;
     height: 20px;
 }
+
 .header ul li{
     display: flex;
     flex: 1;
     float: left;
     margin: 5px 15px;
-   
+    float: left;
+
 }
+
 .body1 div{
     float: left;
     margin: 30px 30px;
 }
- .search{
+
+.search{
     width: 500px;
     height: 50px;
     border: 3px solid red;
     display: flex;
     /* flex: 1; */
+    position: relative;
 }
 
-.search > input {
-    border: none; 
+.search>input{
+    border: none;
     outline: none;
     width: 400px;
     /* box-sizing: border-box; */
     padding-left: 20px;
     /* font-size: 30px; */
     position: relative;
-  }
-  .inputdown{
-      position: absolute;
-      top: 210px;
-      left: 430px;
+}
 
-  }
-   .search > button {
+.inputdown{
+    position: absolute;
+    top: 210px;
+    left: 450px;
+    font-size: 10px;
+}
+
+.inputdown li{
+    margin: 5px 5px;
+    float: left;
+}
+
+.search>button{
     border: none;
     outline: none;
     flex: 1;
@@ -56,27 +70,178 @@
     color: #fff;
     font-size: 30px;
     cursor: pointer;
-  }
-  .body2{
-      width: 100%;
-      background-color: red;
-      height: 40px;
-   
-  }
-  .body2 ul{
-        margin-left: 200px;
-        color: white;
-  }
-  .body2 ul li{
-    margin: 5px 20px;
-  }
-  .swiper-container {
-    width: 500px;
-    /* height: 300px; */
 }
-.swiper-container > img{
+.search>ul {
+    width: 480px;
+    /* margin: 0 auto; */
+    padding-left: 20px;
+    border: 2px solid #000;
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* display: block; */
+    background-color: white;
+    z-index: 10;
+}
+.body2{
     width: 100%;
+    background-color: red;
+    height: 24px;
+
 }
-.body3 div{
+
+.body2 ul{
+    margin-left: 200px;
+    color: white;
+    font-size: 20px;
+    height: line-height;
+    text-align: center;
     float: left;
+}
+
+.body2 > ul > li{
+    margin: 0px 20px;
+    float: left;
+}
+
+
+
+.body3 > div{
+    float: left;
+}
+.body3-2{
+    /* width: 0px!important; */
+
+}
+.swiper-container{
+    width: 500px;
+    /* margin-top: -10px; */
+    /* margin-left: 340px; */
+}
+
+.swiper-container>img {
+    /* width: 100%; */
+}
+
+.body3-3{
+    width: 200px;
+    height: 300px;
+    /* border: 1px solid #333; */
+    /* display: flex; */
+    /* margin-bottom: -29px; */
+    /* margin-left: 20px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.body3-3 > ul > li{
+    width: 140px;
+    height: 68px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    flex: 1;
+    margin: 0px 0px 0px 20px;
+    float: left;
+}
+/* 
+.body3-3 > ul > img{
+    width: 100px;
+    height: 50px;
+} */
+.catOneBox{
+    /* width: 300px; */
+    border: 1px solid #333;
+    /* display: flex; */
+    /* flex:1; */
+}
+.catTwoBox{
+    /* width: 300px; */
+    border: 1px solid #333333;
+    /* display: flex; */
+    /* flex: 1; */
+}
+.active{
+    background-color: pink;
+}
+.fenlei{
+    border: 1px solid #333333;
+    width: 300px;
+    height: 285px;
+    /* flex: 1; */
+    /* display: flex; */
+}  
+  .filterinfo li {
+    width: 100%;
+    height: 80px;
+    display: flex;
+  }
+  
+  .filterinfo li > .left {
+    width: 130px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .filterinfo li > .right {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+  }
+  
+  span{
+    font-size: 14px;
+    /* padding: 5px 10px; */
+    margin: 3px;
+    cursor: pointer;
+  }
+  
+  .filterinfo li > .right > span.active,
+  .filterinfo li > .right > span:hover {
+    background-color: pink;
+    color: #fff;
+  }
+  
+  .goodsList > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+   .goodsList  li {
+    box-sizing: border-box;
+    float: left;
+    width: 23%;
+  }
+  
+   .goodsList  li h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  
+   .goodsList > li .price {
+    font-size: 20pxs;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination a {
+    padding: 0 5px;
+    border: 1px solid #333;
+    margin: 0 5px;
+  }
+  
+ li,img :hover{
+    cursor: pointer;  
 }

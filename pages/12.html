@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="width100 marT15 content_news_list">
+    <div class="width96 mauto">
+            <div class="width100" >
+                <table style="width:100%" id="tabRegister">
+                    <tr class="trHight">
+                        <td class="td1">
+                             用户名 
+                        </td><!--用户名信息验证-->
+                        <td  class="td2"><input type="text" id="inp_user" class="textInput" οnblur="m_userTipOnblur();"  />
+                            <span id="span_userTip" style="color:#f00;display:inline-block;" >*</span>
+                        </td><!--用户名信息验证-->
+                    </tr>
+                    
+                    <tr class="trHight">
+                        <td class="td1">
+                             姓名 
+                        </td><!--姓名信息验证-->
+                        <td  class="td2"><input type="text" id="inp_name" class="textInput" οnfοcus="m_nameTipOnFocus();" οnblur="m_nameTipOnblur();" />
+                    <span style="color:#f00">*</span>
+                            <span id="span_nameTip"  style="color:#f00;display:none;" ></span>
+                        </td><!--姓名信息验证-->
+                    </tr>
+                    <tr class="trHight">
+                        <td class="td1">
+                              密码 
+                        </td><!--密码信息验证-->
+                        <td  class="td2"><asp:TextBox id="asp_psw" class="textInput"  runat="server"  TextMode="Password" οnblur="m_PasswordTipOnblur();"></asp:TextBox>
+                    <span style="color:#f00">*</span>
+                          <span id="span_PasswordTip"  style="color:#f00;display:none;" ></span>
+                        </td><!--密码信息验证-->
+                    </tr>
+                    <tr class="trHight">
+                        <td class="td1">
+                             确认密码 
+                        </td><!--确认密码信息验证-->
+                        <td  class="td2"><asp:TextBox id="asp_cpsw" class="textInput"  runat="server"  TextMode="Password" οnblur="m_ConfirmPasswordTipOnblur();"></asp:TextBox>
+                    <span style="color:#f00">*</span>
+                            <span id="span_ConfirmPasswordTip" style="color:#f00;display:none;"></span>
+                        </td><!--确认密码信息验证-->
+                    </tr>
+                    <tr class="trHight">
+                        <td class="td1">
+                             职称 
+                        </td><!--职称-->
+                        <td  class="td2"><input type="text"id="Text2" class="textInput" οnclick="zcchoose()"/>
+                   </td><!--职称-->
+                    </tr>
+                    <tr class="trHight">
+                        <td class="td1">
+                             委员职务 
+                        </td><!--委员职务-->
+                        <td  class="td2"><input type="text" id="Text3" class="textInput" οnclick="zwchoose()"/>
+                    </td><!--委员职务-->
+                    </tr>
+                    <tr class="trHight">
+                        <td class="td1">
+                             联系方式 
+                        </td><!--联系方式-->
+                        <td  class="td2"><input type="text"id="inp_tel" class="textInput" οnblur="m_telTipOnblur();"/>
+                    <span style="color:#f00">*</span>
+                            <span id="span_tel"  style="color:#f00;display:none;" ></span>
+                        </td><!--联系方式-->
+                    </tr>
+                    <tr class="trHight">
+                        <td class="td1">
+                             单位 
+                        </td><!--单位-->
+                        <td  class="td2"><input type="text" id="Text4" class="textInput" οnclick="dwchoose()"/>
+                   </td><!--单位-->
+                    </tr>
+                    <tr class="trHight">
+                        <td class="td1">
+                             工作组 
+                        </td><!--工作组-->
+                        <td  class="td2"><input type="text" id="Text5" class="textInput" οnclick="wgchoose()"/>
+                    </td><!--工作组-->
+                    </tr>
+                    <tr  style="height:70px;line-height:70px;">
+                         <td class="td1">
+                        </td>
+                        <td  class="td2" style="padding-top :10px;" >
+                            <button οnclick="m_zhuce();">确认</button>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</div>
+<script src="../pages/12.js"></script>
+</body>
+</html>

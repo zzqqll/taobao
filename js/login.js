@@ -1,42 +1,51 @@
-// jQuery的入口函数  ,Dom结构加载完毕   就会执行
-//第二个作用   保护变量私有化\
-$(function (){ 
-         //使用validata 插件进行表单验证操作
+$(function () {
+    // 1. 使用 validate 插件进行表单验证操作
     $('#login').validate({
-   rules:{
-       username:{
-           required:true,
-           minlength:5,
-           maxlength:10
-       },
-       password:{
-           required:true,
-           minlength:6,
-           maxlength:14
-       }
-   },
-   
-   //提示信息配置
-   message:{
-       username:{
-           required:'请填写用户名信息',
-           minlength:'最少 5 个字符',
-           maxlength: '最多10个字符'     
-       }
-   },
-   submitHandler(from){
-       const info = $(from).serialize()
-       $.post('../sever/login.php','info','null','json').then(res =>{
-           console.log(res)
-
-           if(res.code === 0){
-               $('.login_error').removeClass('hide')
-           }else if(res.code === 1){
-               setCookie('nickname',res.nickname)
-               window.location.href = '../pages/index.html'
-           }
-       })
-   }
-    
+      // 规则配置
+      rules: {
+        username: {
+          required: true,
+          minlength: 5,
+          maxlength: 10
+        },
+        password: {
+          required: true,
+          minlength: 6,
+          maxlength: 12
+        }
+      },
+      // 提示信息配置
+      messages: {
+        username: {
+          required: '请填写用户名信息',
+          minlength: '最少 5 个字符',
+          maxlength: '最多 10 个字符'
+        }
+      },
+      // 表单提交事件
+      submitHandler (form) {
+        // 2. 进行表单提交
+        // 2-1. 拿到用户填写的内容
+        const info = $(form).serialize()
+  
+        // 2-2. 发送请求到后端, 准备接受结果
+        $.post('../server/login.php', info, null, 'json').then(res => {
+          // res 就是后端给我的结果
+          console.log(res)
+  
+          // 3. 登录成功以后的操作
+          if (res.code === 0) {
+            // 登录失败
+            $('.login_error').removeClass('hide')
+          } else if (res.code === 1) {
+            // 3-2. 登录成功, 跳转页面, 存储 cookie
+            // 为了在首页还需要使用
+            setCookie('nickname', res.nickname)
+            // 跳转页面
+            window.location.href = '../pages/index.html'
+          }
+        })
+      }
     })
-})
+  })
+  
